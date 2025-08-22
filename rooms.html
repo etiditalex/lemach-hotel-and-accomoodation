@@ -56,25 +56,33 @@
             cursor: pointer;
         }
         
-        .bar {
-            width: 25px;
-            height: 3px;
-            background: #8B4513;
-            margin: 3px 0;
-            transition: 0.3s;
-        }
+                    .bar {
+                width: 25px;
+                height: 3px;
+                background: #8B4513;
+                margin: 3px 0;
+                transition: 0.3s;
+            }
         
-        .nav-logo h2 {
-            color: #8B4513;
-            font-size: 1.8rem;
-            margin: 0;
-        }
-        
-        .nav-logo span {
-            color: #D2691E;
-            font-size: 0.9rem;
-            font-weight: 300;
-        }
+                    .nav-logo {
+                display: flex;
+                align-items: center;
+            }
+            
+            .nav-logo img {
+                height: 50px;
+                width: auto;
+                max-width: 200px;
+                object-fit: contain;
+            }
+            
+            .nav-logo img {
+                height: 60px;
+                width: auto;
+                max-width: 220px;
+                object-fit: contain;
+                filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            }
         
         .nav-menu {
             display: flex;
@@ -98,9 +106,9 @@
             gap: 0.5rem;
         }
         
-        .nav-link:hover, .nav-link.active {
-            color: #8B4513;
-        }
+                    .nav-link:hover, .nav-link.active {
+                color: #8B4513;
+            }
         
         .dropdown-menu {
             position: absolute;
@@ -133,10 +141,10 @@
             transition: background 0.3s ease;
         }
         
-        .dropdown-menu li a:hover {
-            background: #F8F9FA;
-            color: #8B4513;
-        }
+                    .dropdown-menu li a:hover {
+                background: #F8F9FA;
+                color: #8B4513;
+            }
         
         .btn {
             display: inline-block;
@@ -150,22 +158,22 @@
             font-size: 1rem;
         }
         
-        .btn-primary {
-            background: linear-gradient(135deg, #8B4513, #D2691E);
-            color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+                    .btn-primary {
+                background: linear-gradient(135deg, #8B4513, #D2691E);
+                color: white;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
         
-        .btn-outline {
-            background: transparent;
-            color: #8B4513;
-            border: 2px solid #8B4513;
-        }
-        
-        .btn-outline:hover {
-            background: #8B4513;
-            color: white;
-        }
+                    .btn-outline {
+                background: transparent;
+                color: #8B4513;
+                border: 2px solid #8B4513;
+            }
+            
+            .btn-outline:hover {
+                background: #8B4513;
+                color: white;
+            }
         
         .container {
             max-width: 1200px;
@@ -230,7 +238,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background: rgba(139, 69, 19, 0.9);
+            background: rgba(44, 62, 80, 0.9);
             color: white;
             padding: 1rem;
             border-radius: 10px;
@@ -247,7 +255,7 @@
         }
         
         .room-content h3 {
-            color: #8B4513;
+            color: #2C3E50;
             margin-bottom: 1rem;
             font-family: 'Playfair Display', serif;
         }
@@ -319,7 +327,7 @@
         .social-links a {
             width: 40px;
             height: 40px;
-            background: #8B4513;
+            background: #2C3E50;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -374,8 +382,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <h2>Lemach Hotel</h2>
-                    <span>& Accommodations</span>
+                    <img src="images/lemach-logo.svg" alt="Lemach Hotel Logo" class="logo-image">
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
