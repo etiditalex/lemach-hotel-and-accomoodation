@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Lemach Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Lemach Hotel</h2>
+                    <span>& Accommodations</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="meetings-events.html" class="nav-link">Meetings & Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rooms.html" class="nav-link">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="deals.html" class="nav-link">Deals</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Culinary <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="bar-restaurant.html">Bar & Restaurant</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for reservations, inquiries, or any assistance you need</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Address</h3>
+                    <p>B69 Highway<br>Kilifi County, Kenya</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+254 XXX XXX XXX<br>+254 XXX XXX XXX</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>info@lemachhotel.com<br>reservations@lemachhotel.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Hours</h3>
+                    <p>24/7 Front Desk<br>Check-in: 2:00 PM<br>Check-out: 11:00 AM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="reservation">Reservation Inquiry</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Please tell us how we can help you..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="map-container">
+                    <h2>Find Us</h2>
+                    <div class="map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.1234567890123!2d39.12345678901234!3d-3.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMDcnMjQuNCJTIDM5wrAwNycwMC4wIkU!5e0!3m2!1sen!2ske!4v1234567890123"
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius: 15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="directions">
+                        <h3>Getting Here</h3>
+                        <p><strong>By Road:</strong> Located just off B69 highway, easily accessible from Mombasa and Malindi.</p>
+                        <p><strong>By Air:</strong> Nearest airport is Mombasa International Airport (MBA), approximately 1.5 hours drive.</p>
+                        <p><strong>By Public Transport:</strong> Regular matatu services available from major towns in the region.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What are your check-in and check-out times?</h3>
+                    <p>Check-in time is 2:00 PM and check-out time is 11:00 AM. Early check-in and late check-out can be arranged based on availability.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer airport transfers?</h3>
+                    <p>Yes, we provide airport transfer services from Mombasa International Airport. Please contact us in advance to arrange this service.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is parking available?</h3>
+                    <p>Yes, we offer free parking for all our guests. The parking area is secure and monitored 24/7.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you accept pets?</h3>
+                    <p>Unfortunately, we do not allow pets in our hotel. We can recommend nearby pet-friendly accommodations if needed.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept cash, major credit cards (Visa, MasterCard), mobile money (M-Pesa, Airtel Money), and bank transfers.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you have WiFi?</h3>
+                    <p>Yes, we provide complimentary high-speed WiFi throughout the hotel for all our guests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for special offers, events, and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lemach Hotel</h3>
+                    <p>Your perfect destination for luxury accommodation, dining, and events in Kilifi County.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="meetings-events.html">Meetings & Events</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="deals.html">Deals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="bar-restaurant.html">Bar & Restaurant</a></li>
+                        <li><a href="meetings-events.html">Conference Room</a></li>
+                        <li><a href="#">Swimming Pool</a></li>
+                        <li><a href="#">Activities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> B69, Kilifi County, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 XXX XXX XXX</p>
+                        <p><i class="fas fa-envelope"></i> info@lemachhotel.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lemach Hotel & Accommodations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.innerHTML = '<span class="loading"></span> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Newsletter form handling
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('input[type="email"]').value;
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.innerHTML = '<span class="loading"></span> Subscribing...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for subscribing to our newsletter!');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

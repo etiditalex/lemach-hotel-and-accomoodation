@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu - Lemach Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Lemach Hotel</h2>
+                    <span>& Accommodations</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="meetings-events.html" class="nav-link">Meetings & Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rooms.html" class="nav-link">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="deals.html" class="nav-link">Deals</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Culinary <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="bar-restaurant.html">Bar & Restaurant</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Restaurant Menu</h1>
+            <p>Discover our exquisite culinary offerings featuring local and international cuisine</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="breakfast">Breakfast</button>
+                <button class="category-btn" data-category="lunch">Lunch</button>
+                <button class="category-btn" data-category="dinner">Dinner</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="beverages">Beverages</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Breakfast Items -->
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-image">
+                        <img src="images/breakfast-1.jpg" alt="Continental Breakfast">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Continental Breakfast</h3>
+                        <p>Fresh pastries, butter, jam, and your choice of coffee or tea</p>
+                        <div class="menu-item-price">KSh 1,200</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="breakfast">
+                    <div class="menu-item-image">
+                        <img src="images/breakfast-2.jpg" alt="Full English Breakfast">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Full English Breakfast</h3>
+                        <p>Eggs, bacon, sausages, baked beans, mushrooms, and toast</p>
+                        <div class="menu-item-price">KSh 1,800</div>
+                    </div>
+                </div>
+
+                <!-- Lunch Items -->
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="images/lunch-1.jpg" alt="Grilled Chicken Salad">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Grilled Chicken Salad</h3>
+                        <p>Fresh mixed greens with grilled chicken, cherry tomatoes, and balsamic dressing</p>
+                        <div class="menu-item-price">KSh 1,500</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="images/lunch-2.jpg" alt="Beef Burger">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Classic Beef Burger</h3>
+                        <p>Juicy beef patty with lettuce, tomato, cheese, and special sauce</p>
+                        <div class="menu-item-price">KSh 1,300</div>
+                    </div>
+                </div>
+
+                <!-- Dinner Items -->
+                <div class="menu-item" data-category="dinner">
+                    <div class="menu-item-image">
+                        <img src="images/dinner-1.jpg" alt="Grilled Salmon">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Grilled Salmon</h3>
+                        <p>Fresh salmon fillet with seasonal vegetables and lemon butter sauce</p>
+                        <div class="menu-item-price">KSh 2,500</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dinner">
+                    <div class="menu-item-image">
+                        <img src="images/dinner-2.jpg" alt="Beef Tenderloin">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Beef Tenderloin</h3>
+                        <p>Premium beef tenderloin with roasted potatoes and red wine reduction</p>
+                        <div class="menu-item-price">KSh 3,200</div>
+                    </div>
+                </div>
+
+                <!-- Local Cuisine -->
+                <div class="menu-item" data-category="dinner">
+                    <div class="menu-item-image">
+                        <img src="images/local-1.jpg" alt="Nyama Choma">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Nyama Choma</h3>
+                        <p>Traditional Kenyan grilled meat served with ugali and kachumbari</p>
+                        <div class="menu-item-price">KSh 2,800</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="lunch">
+                    <div class="menu-item-image">
+                        <img src="images/local-2.jpg" alt="Pilau Rice">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Pilau Rice</h3>
+                        <p>Fragrant spiced rice with tender meat and aromatic spices</p>
+                        <div class="menu-item-price">KSh 1,600</div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="images/dessert-1.jpg" alt="Chocolate Cake">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chocolate Lava Cake</h3>
+                        <p>Warm chocolate cake with molten center, served with vanilla ice cream</p>
+                        <div class="menu-item-price">KSh 800</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="images/dessert-2.jpg" alt="Tiramisu">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Tiramisu</h3>
+                        <p>Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cream</p>
+                        <div class="menu-item-price">KSh 900</div>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-item" data-category="beverages">
+                    <div class="menu-item-image">
+                        <img src="images/beverage-1.jpg" alt="Fresh Juice">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Fresh Fruit Juice</h3>
+                        <p>Selection of fresh seasonal fruit juices - mango, passion fruit, or orange</p>
+                        <div class="menu-item-price">KSh 400</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverages">
+                    <div class="menu-item-image">
+                        <img src="images/beverage-2.jpg" alt="Coffee">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Premium Coffee</h3>
+                        <p>Freshly brewed coffee from local Kenyan beans</p>
+                        <div class="menu-item-price">KSh 300</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Dietary Options -->
+    <section class="dietary-section">
+        <div class="container">
+            <h2 class="section-title">Special Dietary Options</h2>
+            <div class="dietary-grid">
+                <div class="dietary-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Vegetarian</h3>
+                    <p>Delicious vegetarian options made with fresh, local ingredients</p>
+                </div>
+                <div class="dietary-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Vegan</h3>
+                    <p>Plant-based dishes that are both nutritious and flavorful</p>
+                </div>
+                <div class="dietary-card">
+                    <i class="fas fa-wheat-awn"></i>
+                    <h3>Gluten-Free</h3>
+                    <p>Carefully prepared gluten-free alternatives for dietary restrictions</p>
+                </div>
+                <div class="dietary-card">
+                    <i class="fas fa-fish"></i>
+                    <h3>Seafood</h3>
+                    <p>Fresh seafood dishes featuring local catch and international favorites</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Hours -->
+    <section class="hours-section">
+        <div class="container">
+            <div class="hours-content">
+                <h2>Restaurant Hours</h2>
+                <div class="hours-grid">
+                    <div class="hours-item">
+                        <span class="day">Breakfast</span>
+                        <span class="time">6:30 AM - 10:30 AM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Lunch</span>
+                        <span class="time">12:00 PM - 3:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Dinner</span>
+                        <span class="time">6:30 PM - 10:30 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Bar</span>
+                        <span class="time">11:00 AM - 12:00 AM</span>
+                    </div>
+                </div>
+                <p class="reservation-note">For reservations, please call +254 XXX XXX XXX or book online</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lemach Hotel</h3>
+                    <p>Your perfect destination for luxury accommodation, dining, and events in Kilifi County.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="meetings-events.html">Meetings & Events</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="deals.html">Deals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="bar-restaurant.html">Bar & Restaurant</a></li>
+                        <li><a href="meetings-events.html">Conference Room</a></li>
+                        <li><a href="#">Swimming Pool</a></li>
+                        <li><a href="#">Activities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> B69, Kilifi County, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 XXX XXX XXX</p>
+                        <p><i class="fas fa-envelope"></i> info@lemachhotel.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lemach Hotel & Accommodations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Menu category filtering
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                menuItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

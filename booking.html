@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - Lemach Hotel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Lemach Hotel</h2>
+                    <span>& Accommodations</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="meetings-events.html" class="nav-link">Meetings & Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rooms.html" class="nav-link">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="deals.html" class="nav-link">Deals</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Culinary <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="bar-restaurant.html">Bar & Restaurant</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Stay</h1>
+            <p>Reserve your perfect accommodation, event space, or dining experience</p>
+        </div>
+    </section>
+
+    <!-- Booking Types -->
+    <section class="booking-types">
+        <div class="container">
+            <div class="booking-tabs">
+                <button class="tab-btn active" data-tab="rooms">Room Booking</button>
+                <button class="tab-btn" data-tab="events">Event Booking</button>
+                <button class="tab-btn" data-tab="dining">Dining Reservation</button>
+            </div>
+
+            <!-- Room Booking Form -->
+            <div class="booking-form active" id="rooms">
+                <h2>Room Reservation</h2>
+                <form class="booking-form-content" id="roomBookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkIn">Check-in Date *</label>
+                            <input type="date" id="checkIn" name="checkIn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkOut">Check-out Date *</label>
+                            <input type="date" id="checkOut" name="checkOut" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="roomType">Room Type *</label>
+                            <select id="roomType" name="roomType" required>
+                                <option value="">Select room type</option>
+                                <option value="standard">Standard Room - KSh 8,500/night</option>
+                                <option value="deluxe">Deluxe Room - KSh 12,000/night</option>
+                                <option value="family">Family Suite - KSh 18,000/night</option>
+                                <option value="executive">Executive Suite - KSh 25,000/night</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests *</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Select guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5+ Guests</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests</label>
+                        <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Any special requests or preferences..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Room</button>
+                </form>
+            </div>
+
+            <!-- Event Booking Form -->
+            <div class="booking-form" id="events">
+                <h2>Event & Conference Booking</h2>
+                <form class="booking-form-content" id="eventBookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="eventDate">Event Date *</label>
+                            <input type="date" id="eventDate" name="eventDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventTime">Event Time *</label>
+                            <select id="eventTime" name="eventTime" required>
+                                <option value="">Select time</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="eventType">Event Type *</label>
+                            <select id="eventType" name="eventType" required>
+                                <option value="">Select event type</option>
+                                <option value="conference">Conference</option>
+                                <option value="meeting">Business Meeting</option>
+                                <option value="seminar">Seminar</option>
+                                <option value="workshop">Workshop</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="attendees">Number of Attendees *</label>
+                            <input type="number" id="attendees" name="attendees" min="1" max="100" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="eventName">Event Name *</label>
+                            <input type="text" id="eventName" name="eventName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDuration">Duration (Hours) *</label>
+                            <select id="eventDuration" name="eventDuration" required>
+                                <option value="">Select duration</option>
+                                <option value="2">2 Hours</option>
+                                <option value="4">4 Hours</option>
+                                <option value="6">6 Hours</option>
+                                <option value="8">8 Hours</option>
+                                <option value="full-day">Full Day</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Contact Name *</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Contact Email *</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Event Description</label>
+                        <textarea id="eventDescription" name="eventDescription" rows="3" placeholder="Please describe your event requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Event</button>
+                </form>
+            </div>
+
+            <!-- Dining Reservation Form -->
+            <div class="booking-form" id="dining">
+                <h2>Dining Reservation</h2>
+                <form class="booking-form-content" id="diningBookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="diningDate">Reservation Date *</label>
+                            <input type="date" id="diningDate" name="diningDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="diningTime">Reservation Time *</label>
+                            <select id="diningTime" name="diningTime" required>
+                                <option value="">Select time</option>
+                                <option value="06:30">6:30 AM (Breakfast)</option>
+                                <option value="07:00">7:00 AM (Breakfast)</option>
+                                <option value="08:00">8:00 AM (Breakfast)</option>
+                                <option value="12:00">12:00 PM (Lunch)</option>
+                                <option value="13:00">1:00 PM (Lunch)</option>
+                                <option value="18:30">6:30 PM (Dinner)</option>
+                                <option value="19:00">7:00 PM (Dinner)</option>
+                                <option value="20:00">8:00 PM (Dinner)</option>
+                                <option value="21:00">9:00 PM (Dinner)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="diningGuests">Number of Guests *</label>
+                            <select id="diningGuests" name="diningGuests" required>
+                                <option value="">Select guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6+ Guests</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="diningArea">Dining Area</label>
+                            <select id="diningArea" name="diningArea">
+                                <option value="">Any area</option>
+                                <option value="main">Main Restaurant</option>
+                                <option value="terrace">Outdoor Terrace</option>
+                                <option value="bar">Bar & Lounge</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="diningName">Full Name *</label>
+                            <input type="text" id="diningName" name="diningName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="diningEmail">Email Address *</label>
+                            <input type="email" id="diningEmail" name="diningEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="diningPhone">Phone Number</label>
+                        <input type="tel" id="diningPhone" name="diningPhone">
+                    </div>
+                    <div class="form-group">
+                        <label for="diningRequests">Special Requests</label>
+                        <textarea id="diningRequests" name="diningRequests" rows="3" placeholder="Any dietary requirements or special requests..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Table</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Information -->
+    <section class="booking-info">
+        <div class="container">
+            <h2 class="section-title">Booking Information</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Payment</h3>
+                    <p>We accept all major credit cards, mobile money (M-Pesa, Airtel Money), and bank transfers. A deposit may be required for certain bookings.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Cancellation Policy</h3>
+                    <p>Free cancellation up to 48 hours before check-in. Late cancellations may incur charges. Please check specific terms for events and dining.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Check-in/Check-out</h3>
+                    <p>Check-in time: 2:00 PM | Check-out time: 11:00 AM. Early check-in and late check-out available upon request and availability.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Contact Us</h3>
+                    <p>For immediate assistance or special requests, please call us at +254 XXX XXX XXX or email reservations@lemachhotel.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lemach Hotel</h3>
+                    <p>Your perfect destination for luxury accommodation, dining, and events in Kilifi County.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="meetings-events.html">Meetings & Events</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="deals.html">Deals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="bar-restaurant.html">Bar & Restaurant</a></li>
+                        <li><a href="meetings-events.html">Conference Room</a></li>
+                        <li><a href="#">Swimming Pool</a></li>
+                        <li><a href="#">Activities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> B69, Kilifi County, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 XXX XXX XXX</p>
+                        <p><i class="fas fa-envelope"></i> info@lemachhotel.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lemach Hotel & Accommodations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Booking tabs functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const bookingForms = document.querySelectorAll('.booking-form');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and forms
+                tabBtns.forEach(b => b.classList.remove('active'));
+                bookingForms.forEach(form => form.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding form
+                btn.classList.add('active');
+                const targetForm = document.getElementById(btn.getAttribute('data-tab'));
+                targetForm.classList.add('active');
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('roomBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleFormSubmission(this, 'Room booking');
+        });
+
+        document.getElementById('eventBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleFormSubmission(this, 'Event booking');
+        });
+
+        document.getElementById('diningBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleFormSubmission(this, 'Dining reservation');
+        });
+
+        function handleFormSubmission(form, type) {
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.innerHTML = '<span class="loading"></span> Processing...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert(`Thank you for your ${type} request! We will confirm your booking shortly.`);
+                form.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        }
+
+        // Set minimum date for date inputs
+        const today = new Date().toISOString().split('T')[0];
+        document.querySelectorAll('input[type="date"]').forEach(input => {
+            input.min = today;
+        });
+    </script>
+</body>
+</html>
