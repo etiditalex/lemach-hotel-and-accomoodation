@@ -64,16 +64,12 @@
             transition: 0.3s;
         }
         
-        .nav-logo h2 {
-            color: #8B4513;
-            font-size: 1.8rem;
-            margin: 0;
-        }
-        
-        .nav-logo span {
-            color: #D2691E;
-            font-size: 0.9rem;
-            font-weight: 300;
+        .nav-logo img {
+            height: 60px;
+            width: auto;
+            max-width: 220px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
         
         .nav-menu {
@@ -375,8 +371,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <h2>Lemach Hotel</h2>
-                    <span>& Accommodations</span>
+                    <img src="images/lemach-logo.svg" alt="Lemach Hotel Logo" class="logo-image">
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
