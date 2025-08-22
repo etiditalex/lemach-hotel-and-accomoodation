@@ -72,9 +72,36 @@ Lemach Hotel/
 - Local web server (optional, for development)
 
 ### Installation
+
+#### Option 1: Using a Local Server (Recommended)
 1. Clone or download the project files
-2. Open `index.html` in your web browser
-3. Navigate through the website to explore all features
+2. Open a terminal/command prompt in the project directory
+3. Run one of the following commands:
+   - **Windows (PowerShell)**: `.\start-server.ps1`
+   - **Windows (Command Prompt)**: `start-server.bat`
+   - **Manual**: `python -m http.server 8000`
+4. Open your browser and go to `http://localhost:8000`
+
+#### Option 2: Direct File Opening
+1. Clone or download the project files
+2. Right-click on `index.html` and select "Open with" → your preferred browser
+3. **Note**: Some browsers may have security restrictions that prevent CSS/JS from loading properly when opening files directly
+
+#### Troubleshooting
+If the website appears without styling or animations:
+1. Try using the local server method (Option 1)
+2. Check the browser's developer console (F12) for any error messages
+3. Test with the `test.html` file to verify CSS and JavaScript are working
+4. Ensure all files are in the correct directory structure:
+   ```
+   Lemach Hotel/
+   ├── index.html
+   ├── css/
+   │   └── style.css
+   ├── js/
+   │   └── script.js
+   └── [other HTML files]
+   ```
 
 ### Development
 1. Open the project in your preferred code editor
