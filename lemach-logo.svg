@@ -1,0 +1,24 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D2691E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Hotel building icon -->
+  <rect x="10" y="25" width="20" height="25" fill="url(#logoGradient)" rx="2"/>
+  <rect x="12" y="27" width="4" height="4" fill="white"/>
+  <rect x="18" y="27" width="4" height="4" fill="white"/>
+  <rect x="12" y="33" width="4" height="4" fill="white"/>
+  <rect x="18" y="33" width="4" height="4" fill="white"/>
+  <rect x="12" y="39" width="4" height="4" fill="white"/>
+  <rect x="18" y="39" width="4" height="4" fill="white"/>
+  
+  <!-- Roof -->
+  <polygon points="10,25 20,15 30,25" fill="url(#logoGradient)"/>
+  
+  <!-- Text -->
+  <text x="45" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#8B4513">LEMACH</text>
+  <text x="45" y="50" font-family="Arial, sans-serif" font-size="10" fill="#D2691E">HOTEL</text>
+</svg>
