@@ -24,6 +24,7 @@
    - `contact.html`
    - `deals.html`
    - `booking.html`
+   - `test-css.html` (for testing CSS loading)
    - `css/` folder
    - `js/` folder
    - `images/` folder
