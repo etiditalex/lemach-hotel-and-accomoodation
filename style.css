@@ -718,12 +718,114 @@ html {
     to { transform: rotate(360deg); }
 }
 
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.back-to-top.show {
+    display: flex;
+}
+
 /* Page Header */
 .page-header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
     padding: 120px 0 80px;
     text-align: center;
+}
+
+/* About Us Page Specific Styles */
+.about-story {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.story-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.about-mission {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.mission-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.about-vision {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.vision-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.vision-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .page-header h1 {
@@ -734,6 +836,45 @@ html {
 .page-header p {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
+}
+
+/* Rooms Page Specific Styles */
+.rooms-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.rooms-hero h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.rooms-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rooms-intro {
+    padding: 60px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.rooms-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.rooms-description {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Rooms Section */
@@ -871,6 +1012,12 @@ html {
     margin-bottom: 1rem;
 }
 
+.amenity-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* Booking CTA */
 .booking-cta {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -888,6 +1035,45 @@ html {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
     margin-bottom: 2rem;
+}
+
+/* Meetings & Events Page Specific Styles */
+.meetings-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.meetings-hero h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.meetings-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.meetings-intro {
+    padding: 60px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.meetings-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.meetings-description {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Meetings & Events Styles */
@@ -1007,6 +1193,44 @@ html {
 }
 
 /* Menu Styles */
+.menu-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.menu-hero h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.menu-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menu-intro {
+    padding: 60px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.menu-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.menu-description {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 .menu-section {
     padding: 80px 0;
     background: var(--light-bg);
@@ -1168,6 +1392,12 @@ html {
     margin-bottom: 1.5rem;
 }
 
+.pricing-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
 .price {
     margin-bottom: 2rem;
 }
@@ -1203,6 +1433,12 @@ html {
 .special-events {
     padding: 80px 0;
     background: var(--light-bg);
+}
+
+.special-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
 /* Menu Categories */
@@ -1466,6 +1702,52 @@ html {
     margin-bottom: 1rem;
 }
 
+/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-content {
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-content p {
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.testimonial-role {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
 /* Awards Section */
 .awards-section {
     padding: 80px 0;
@@ -1606,6 +1888,45 @@ html {
     line-height: 1.6;
 }
 
+/* Contact Page Specific Styles */
+.contact-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.contact-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-intro {
+    padding: 60px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.contact-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-description {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 /* Contact Form Section */
 .contact-form-section {
     padding: 80px 0;
@@ -1724,6 +2045,45 @@ html {
 
 .newsletter-form button:hover {
     background: var(--secondary-color);
+}
+
+/* Deals Page Specific Styles */
+.deals-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.deals-hero h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.deals-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.deals-intro {
+    padding: 60px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.deals-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.deals-description {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Featured Deal */
@@ -1978,6 +2338,83 @@ html {
     margin-right: 0.5rem;
 }
 
+/* Bar & Restaurant Page Specific Styles */
+.bar-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.bar-hero h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.bar-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bar-intro {
+    padding: 60px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.bar-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.bar-intro p {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.restaurant-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.restaurant-hero h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.restaurant-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.restaurant-intro {
+    padding: 60px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.restaurant-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.restaurant-intro p {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 /* Restaurant Overview */
 .restaurant-overview {
     padding: 80px 0;
@@ -2226,6 +2663,45 @@ html {
     text-align: left;
 }
 
+/* Booking Page Specific Styles */
+.booking-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.booking-hero h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.booking-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-intro {
+    padding: 60px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.booking-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.booking-description {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 /* Booking Types */
 .booking-types {
     padding: 80px 0;
@@ -2369,4 +2845,3 @@ html {
         padding: 2rem;
     }
 }
-
