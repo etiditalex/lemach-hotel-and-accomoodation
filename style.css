@@ -934,6 +934,12 @@ html {
     margin-bottom: 1rem;
 }
 
+.event-content p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
 .event-features {
     display: flex;
     flex-wrap: wrap;
@@ -947,6 +953,14 @@ html {
     border-radius: 25px;
     font-size: 0.9rem;
     color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.event-features i {
+    color: var(--secondary-color);
+    width: 16px;
 }
 
 /* Contact Form Styles */
@@ -1252,6 +1266,11 @@ html {
     margin-bottom: 1rem;
 }
 
+.dietary-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 /* Hours Section */
 .hours-section {
     padding: 80px 0;
@@ -1345,6 +1364,11 @@ html {
     margin-bottom: 1rem;
 }
 
+.mission-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 /* Why Choose Section */
 .why-choose-section {
     padding: 80px 0;
@@ -1378,6 +1402,11 @@ html {
 .feature-item h4 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+.feature-item p {
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
 /* Team Section */
@@ -1425,6 +1454,11 @@ html {
     margin-bottom: 0.5rem;
 }
 
+.member-info p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 .position {
     color: var(--secondary-color);
     font-weight: 500;
@@ -1465,6 +1499,11 @@ html {
 .award-item h4 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+}
+
+.award-item p {
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
 /* Community Section */
@@ -1511,6 +1550,11 @@ html {
     margin-bottom: 0.5rem;
 }
 
+.initiative p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 /* Contact Info Section */
 .contact-info-section {
     padding: 80px 0;
@@ -1555,6 +1599,11 @@ html {
 .contact-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+.contact-card p {
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
 /* Contact Form Section */
@@ -1617,6 +1666,11 @@ html {
     margin-bottom: 1rem;
 }
 
+.faq-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 /* Newsletter Section */
 .newsletter-section {
     padding: 80px 0;
@@ -1656,6 +1710,20 @@ html {
 .newsletter-form input:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.newsletter-form button {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: var(--secondary-color);
 }
 
 /* Featured Deal */
@@ -1791,8 +1859,25 @@ html {
     margin-bottom: 1rem;
 }
 
+.deal-card .deal-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
 .deal-card .deal-features {
     margin: 1rem 0;
+}
+
+.deal-card .deal-features span {
+    background: var(--light-bg);
+    color: var(--text-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 .deal-card .deal-price {
@@ -1911,6 +1996,12 @@ html {
     margin-bottom: 1.5rem;
 }
 
+.overview-text p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
 .restaurant-features {
     display: flex;
     flex-wrap: wrap;
@@ -1933,8 +2024,15 @@ html {
     color: var(--primary-color);
 }
 
+.overview-image {
+    height: 400px;
+    overflow: hidden;
+}
+
 .overview-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 15px;
     box-shadow: var(--shadow);
 }
@@ -1983,6 +2081,12 @@ html {
     margin-bottom: 1rem;
 }
 
+.dining-content p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
 .dining-features {
     display: flex;
     flex-wrap: wrap;
@@ -1996,6 +2100,14 @@ html {
     border-radius: 25px;
     font-size: 0.9rem;
     color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dining-features i {
+    color: var(--secondary-color);
+    width: 16px;
 }
 
 /* Bar Services */
@@ -2044,10 +2156,21 @@ html {
     margin-bottom: 1rem;
 }
 
+.bar-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 /* Restaurant Events */
 .restaurant-events {
     padding: 80px 0;
     background: var(--white);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
 }
 
 .event-details {
@@ -2063,6 +2186,14 @@ html {
     border-radius: 25px;
     font-size: 0.9rem;
     color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.event-details i {
+    color: var(--secondary-color);
+    width: 16px;
 }
 
 /* Reservation Section */
@@ -2151,6 +2282,12 @@ html {
     text-align: left;
 }
 
+.booking-form-content p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
 /* Booking Info */
 .booking-info {
     padding: 80px 0;
@@ -2184,6 +2321,11 @@ html {
 .info-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+}
+
+.info-card p {
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
 /* Responsive adjustments for new components */
