@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Logs - Lemach Hotel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .debug-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .log-item {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #007bff;
+            font-family: monospace;
+        }
+        .error {
+            border-left-color: #dc3545;
+            background: #f8d7da;
+        }
+        .warning {
+            border-left-color: #ffc107;
+            background: #fff3cd;
+        }
+        .success {
+            border-left-color: #28a745;
+            background: #d4edda;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Logs - Lemach Hotel</h1>
+    
+    <div class="debug-section">
+        <h2>Console Logs</h2>
+        <button onclick="checkConsoleErrors()">Check Console Errors</button>
+        <button onclick="checkCSSIssues()">Check CSS Issues</button>
+        <button onclick="checkMarginIssues()">Check Margin Issues</button>
+        <div id="console-output"></div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>CSS Margin Check</h2>
+        <div id="margin-check"></div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>Image Loading Test</h2>
+        <div id="image-test"></div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>CSS Loading Test</h2>
+        <div id="css-test"></div>
+    </div>
+
+    <script>
+        // Override console methods to capture logs
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalWarn = console.warn;
+        
+        const logs = [];
+        
+        console.log = function(...args) {
+            logs.push({ type: 'log', message: args.join(' '), timestamp: new Date() });
+            originalLog.apply(console, args);
+        };
+        
+        console.error = function(...args) {
+            logs.push({ type: 'error', message: args.join(' '), timestamp: new Date() });
+            originalError.apply(console, args);
+        };
+        
+        console.warn = function(...args) {
+            logs.push({ type: 'warning', message: args.join(' '), timestamp: new Date() });
+            originalWarn.apply(console, args);
+        };
+        
+        function checkConsoleErrors() {
+            const output = document.getElementById('console-output');
+            output.innerHTML = '';
+            
+            if (logs.length === 0) {
+                output.innerHTML = '<div class="log-item success">No console logs captured yet. Try refreshing the page or navigating to other pages.</div>';
+                return;
+            }
+            
+            logs.forEach(log => {
+                const div = document.createElement('div');
+                div.className = `log-item ${log.type}`;
+                div.innerHTML = `
+                    <strong>${log.type.toUpperCase()}:</strong> ${log.message}<br>
+                    <small>${log.timestamp.toLocaleTimeString()}</small>
+                `;
+                output.appendChild(div);
+            });
+        }
+        
+        function checkCSSIssues() {
+            const output = document.getElementById('console-output');
+            const styles = document.styleSheets;
+            let cssIssues = [];
+            
+            try {
+                for (let i = 0; i < styles.length; i++) {
+                    const sheet = styles[i];
+                    if (sheet.href) {
+                        try {
+                            const rules = sheet.cssRules || sheet.rules;
+                            if (rules) {
+                                for (let j = 0; j < rules.length; j++) {
+                                    const rule = rules[j];
+                                    if (rule.style && rule.style.margin === '0') {
+                                        cssIssues.push(`Rule ${j} in ${sheet.href}: margin: 0`);
+                                    }
+                                }
+                            }
+                        } catch (e) {
+                            cssIssues.push(`Cannot access rules from ${sheet.href}: ${e.message}`);
+                        }
+                    }
+                }
+            } catch (e) {
+                cssIssues.push(`Error checking CSS: ${e.message}`);
+            }
+            
+            if (cssIssues.length > 0) {
+                output.innerHTML = '<div class="log-item warning">CSS Issues Found:</div>';
+                cssIssues.forEach(issue => {
+                    const div = document.createElement('div');
+                    div.className = 'log-item warning';
+                    div.textContent = issue;
+                    output.appendChild(div);
+                });
+            } else {
+                output.innerHTML = '<div class="log-item success">No CSS issues found</div>';
+            }
+        }
+        
+        function checkMarginIssues() {
+            const output = document.getElementById('margin-check');
+            const elements = document.querySelectorAll('*');
+            let marginIssues = [];
+            
+            elements.forEach(element => {
+                const style = window.getComputedStyle(element);
+                if (style.margin === '0px') {
+                    marginIssues.push(`${element.tagName.toLowerCase()}.${element.className || 'no-class'}: margin: 0px`);
+                }
+            });
+            
+            if (marginIssues.length > 0) {
+                output.innerHTML = '<div class="log-item warning">Elements with margin: 0 found:</div>';
+                marginIssues.slice(0, 10).forEach(issue => {
+                    const div = document.createElement('div');
+                    div.className = 'log-item warning';
+                    div.textContent = issue;
+                    output.appendChild(div);
+                });
+                if (marginIssues.length > 10) {
+                    output.innerHTML += `<div class="log-item">... and ${marginIssues.length - 10} more</div>`;
+                }
+            } else {
+                output.innerHTML = '<div class="log-item success">No margin: 0 issues found</div>';
+            }
+        }
+        
+        // Test image loading
+        function testImageLoading() {
+            const output = document.getElementById('image-test');
+            const testImages = [
+                'images/lemach-logo.svg',
+                'https://images.unsplash.com/photo-1566073771259-6a200&h=60&fit=crop'
+            ];
+            
+            output.innerHTML = '<div class="log-item">Testing image loading...</div>';
+            
+            testImages.forEach((src, index) => {
+                const img = new Image();
+                img.onload = function() {
+                    const div = document.createElement('div');
+                    div.className = 'log-item success';
+                    div.textContent = `✓ Image ${index + 1} loaded: ${src}`;
+                    output.appendChild(div);
+                };
+                img.onerror = function() {
+                    const div = document.createElement('div');
+                    div.className = 'log-item error';
+                    div.textContent = `✗ Image ${index + 1} failed: ${src}`;
+                    output.appendChild(div);
+                };
+                img.src = src;
+            });
+        }
+        
+        // Test CSS loading
+        function testCSSLoading() {
+            const output = document.getElementById('css-test');
+            const stylesheets = document.styleSheets;
+            
+            output.innerHTML = '<div class="log-item">Testing CSS loading...</div>';
+            
+            for (let i = 0; i < stylesheets.length; i++) {
+                const sheet = stylesheets[i];
+                const div = document.createElement('div');
+                
+                if (sheet.href) {
+                    div.className = 'log-item success';
+                    div.textContent = `✓ External CSS: ${sheet.href}`;
+                } else {
+                    div.className = 'log-item success';
+                    div.textContent = `✓ Inline CSS: ${i + 1}`;
+                }
+                
+                output.appendChild(div);
+            }
+        }
+        
+        // Auto-run tests on page load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                testImageLoading();
+                testCSSLoading();
+            }, 1000);
+        });
+        
+        // Log page load
+        console.log('Debug page loaded successfully');
+        console.log('Page URL:', window.location.href);
+        console.log('User Agent:', navigator.userAgent);
+    </script>
+</body>
+</html>
