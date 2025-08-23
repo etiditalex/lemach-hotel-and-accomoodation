@@ -368,6 +368,429 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        /* Deals Page Specific Styles */
+        .page-header {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: #FFFFFF;
+            padding: 120px 0 80px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .page-header h1 {
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .page-header p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Featured Deal Section */
+        .featured-deal {
+            padding: 80px 0;
+            background: #FFFFFF;
+        }
+        
+        .deal-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .deal-content {
+            padding-right: 2rem;
+        }
+        
+        .deal-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #DAA520, #FFD700);
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .deal-content h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .deal-content p {
+            color: #7F8C8D;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .deal-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .deal-features span {
+            background: #F8F9FA;
+            color: #8B4513;
+            padding: 0.75rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .deal-features i {
+            color: #D2691E;
+        }
+        
+        .deal-price {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .original-price {
+            color: #7F8C8D;
+            text-decoration: line-through;
+            font-size: 1.2rem;
+        }
+        
+        .current-price {
+            color: #8B4513;
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .discount {
+            background: #D2691E;
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .deal-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .deal-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .deal-hero:hover .deal-image img {
+            transform: scale(1.05);
+        }
+        
+        /* Deals Grid Section */
+        .deals-section {
+            padding: 80px 0;
+            background: #F8F9FA;
+        }
+        
+        .deals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .deal-card {
+            background: #FFFFFF;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .deal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .deal-card .deal-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .deal-card .deal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .deal-card:hover .deal-image img {
+            transform: scale(1.05);
+        }
+        
+        .deal-card-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(139, 69, 19, 0.95);
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+        
+        .deal-card-content {
+            padding: 2rem;
+        }
+        
+        .deal-card-content h3 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .deal-card-content p {
+            color: #7F8C8D;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .deal-card-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .deal-card-features span {
+            background: #F8F9FA;
+            color: #8B4513;
+            padding: 0.5rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .deal-card-price {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .deal-card-original {
+            color: #7F8C8D;
+            text-decoration: line-through;
+            font-size: 1rem;
+        }
+        
+        .deal-card-current {
+            color: #8B4513;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .deal-card-discount {
+            background: #D2691E;
+            color: #FFFFFF;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* Loyalty Section */
+        .loyalty-section {
+            padding: 80px 0;
+            background: #FFFFFF;
+        }
+        
+        .loyalty-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .loyalty-content h2 {
+            color: #8B4513;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .loyalty-content p {
+            color: #7F8C8D;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .loyalty-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-item {
+            background: #F8F9FA;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .benefit-item i {
+            font-size: 3rem;
+            color: #8B4513;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-item h4 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .benefit-item p {
+            color: #7F8C8D;
+            line-height: 1.6;
+        }
+        
+        /* Terms Section */
+        .terms-section {
+            padding: 80px 0;
+            background: #F8F9FA;
+        }
+        
+        .terms-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .terms-content h2 {
+            color: #8B4513;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+        }
+        
+        .terms-item {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .terms-item h4 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .terms-item p {
+            color: #7F8C8D;
+            line-height: 1.6;
+        }
+        
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .section-title p {
+            color: #7F8C8D;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Additional Responsive Styles */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .deal-hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .deal-content {
+                padding-right: 0;
+            }
+            
+            .deals-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .loyalty-benefits {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .deal-features {
+                justify-content: center;
+            }
+            
+            .deal-price {
+                justify-content: center;
+            }
+            
+            .loyalty-benefits {
+                grid-template-columns: 1fr;
+            }
+            
+            .deal-card-content {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -376,7 +799,11 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="images/lemach-logo.svg" alt="Lemach Hotel Logo" class="logo-image">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200&h=60&fit=crop" alt="Lemach Hotel Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display: none;">
+                        <h2 style="color: #8B4513; margin: 0; font-family: 'Playfair Display', serif;">LEMACH HOTEL</h2>
+                        <span style="color: #D2691E; font-size: 0.9rem;">& ACCOMMODATIONS</span>
+                    </div>
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
@@ -447,7 +874,7 @@
                     <a href="booking.html" class="btn btn-primary">Book This Deal</a>
                 </div>
                 <div class="deal-image">
-                    <img src="images/weekend-deal.jpg" alt="Weekend Getaway">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop" alt="Weekend Getaway">
                 </div>
             </div>
         </div>
@@ -460,7 +887,7 @@
             <div class="deals-grid">
                 <div class="deal-card">
                     <div class="deal-image">
-                        <img src="images/family-package.jpg" alt="Family Package">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=250&fit=crop" alt="Family Package">
                         <div class="deal-badge">Family Special</div>
                     </div>
                     <div class="deal-content">
@@ -481,7 +908,7 @@
 
                 <div class="deal-card">
                     <div class="deal-image">
-                        <img src="images/business-package.jpg" alt="Business Package">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=250&fit=crop" alt="Business Package">
                         <div class="deal-badge">Business Special</div>
                     </div>
                     <div class="deal-content">
@@ -502,7 +929,7 @@
 
                 <div class="deal-card">
                     <div class="deal-image">
-                        <img src="images/honeymoon-package.jpg" alt="Honeymoon Package">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=250&fit=crop" alt="Honeymoon Package">
                         <div class="deal-badge">Romance Special</div>
                     </div>
                     <div class="deal-content">
@@ -523,7 +950,7 @@
 
                 <div class="deal-card">
                     <div class="deal-image">
-                        <img src="images/long-stay.jpg" alt="Long Stay Package">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=250&fit=crop" alt="Long Stay Package">
                         <div class="deal-badge">Extended Stay</div>
                     </div>
                     <div class="deal-content">
@@ -544,7 +971,7 @@
 
                 <div class="deal-card">
                     <div class="deal-image">
-                        <img src="images/group-booking.jpg" alt="Group Booking">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=250&fit=crop" alt="Group Booking">
                         <div class="deal-badge">Group Discount</div>
                     </div>
                     <div class="deal-content">
@@ -565,7 +992,7 @@
 
                 <div class="deal-card">
                     <div class="deal-image">
-                        <img src="images/seasonal-offer.jpg" alt="Seasonal Offer">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=250&fit=crop" alt="Seasonal Offer">
                         <div class="deal-badge">Seasonal Special</div>
                     </div>
                     <div class="deal-content">
