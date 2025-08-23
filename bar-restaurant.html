@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu - Lemach Hotel</title>
+    <title>Bar & Restaurant - Lemach Hotel</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -198,8 +198,8 @@
             margin: 0 auto;
         }
         
-        /* Menu Section */
-        .menu-section {
+        /* Restaurant Overview */
+        .restaurant-overview {
             padding: 80px 0;
             background: #F8F9FA;
         }
@@ -213,38 +213,69 @@
             font-weight: 600;
         }
         
-        .menu-categories {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-        
-        .category-btn {
-            padding: 0.8rem 1.5rem;
-            border: 2px solid #8B4513;
-            background: transparent;
-            color: #8B4513;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .category-btn:hover,
-        .category-btn.active {
-            background: #8B4513;
-            color: #FFFFFF;
-        }
-        
-        .menu-grid {
+        .overview-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .overview-text h2 {
+            color: #8B4513;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+        }
+        
+        .overview-text p {
+            color: #7F8C8D;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .restaurant-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .restaurant-features span {
+            background: #F8F9FA;
+            color: #8B4513;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .restaurant-features i {
+            color: #D2691E;
+        }
+        
+        .overview-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        /* Dining Areas */
+        .dining-areas {
+            padding: 80px 0;
+            background: #FFFFFF;
+        }
+        
+        .dining-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
         
-        .menu-item {
+        .dining-card {
             background: white;
             border-radius: 15px;
             overflow: hidden;
@@ -252,48 +283,64 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .menu-item:hover {
+        .dining-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0,0,0,0.2);
         }
         
-        .menu-item-image {
-            height: 200px;
+        .dining-image {
+            height: 250px;
             overflow: hidden;
         }
         
-        .menu-item-image img {
+        .dining-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
         
-        .menu-item:hover .menu-item-image img {
+        .dining-card:hover .dining-image img {
             transform: scale(1.05);
         }
         
-        .menu-item-content {
-            padding: 20px;
+        .dining-content {
+            padding: 30px;
         }
         
-        .menu-item-content h3 {
+        .dining-content h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: #8B4513;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-weight: 600;
         }
         
-        .menu-item-content p {
+        .dining-content p {
             color: #7F8C8D;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             line-height: 1.6;
         }
         
-        .menu-item-price {
-            font-size: 1.2rem;
-            font-weight: 600;
+        .dining-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .dining-features span {
+            background: #F8F9FA;
+            color: #8B4513;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .dining-features i {
             color: #D2691E;
         }
         
@@ -389,7 +436,12 @@
                 font-size: 2rem;
             }
             
-            .menu-grid {
+            .overview-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .dining-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -403,8 +455,8 @@
                 padding: 0 15px;
             }
             
-            .menu-item-content {
-                padding: 15px;
+            .dining-content {
+                padding: 20px;
             }
         }
         
@@ -477,218 +529,241 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Restaurant Menu</h1>
-            <p>Discover our exquisite culinary offerings featuring local and international cuisine</p>
+            <h1>Bar & Restaurant</h1>
+            <p>Experience exquisite dining and refreshing drinks in our elegant restaurant and bar</p>
         </div>
     </section>
 
-    <!-- Menu Categories -->
-    <section class="menu-section">
+    <!-- Restaurant Overview -->
+    <section class="restaurant-overview">
         <div class="container">
-            <div class="menu-categories">
-                <button class="category-btn active" data-category="all">All</button>
-                <button class="category-btn" data-category="breakfast">Breakfast</button>
-                <button class="category-btn" data-category="lunch">Lunch</button>
-                <button class="category-btn" data-category="dinner">Dinner</button>
-                <button class="category-btn" data-category="desserts">Desserts</button>
-                <button class="category-btn" data-category="beverages">Beverages</button>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2>Welcome to Our Restaurant</h2>
+                    <p>At Lemach Hotel's restaurant, we take pride in offering a culinary journey that combines traditional Kenyan flavors with international cuisine. Our expert chefs use the finest local ingredients to create memorable dining experiences.</p>
+                    <p>Whether you're enjoying a romantic dinner, a family meal, or a business lunch, our restaurant provides the perfect setting with its elegant ambiance and attentive service.</p>
+                    <div class="restaurant-features">
+                        <span><i class="fas fa-utensils"></i> Fine Dining</span>
+                        <span><i class="fas fa-wine-glass"></i> Premium Wines</span>
+                        <span><i class="fas fa-music"></i> Live Music</span>
+                        <span><i class="fas fa-mountain"></i> Garden Views</span>
+                    </div>
+                </div>
+                <div class="overview-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" alt="Restaurant Interior">
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="menu-grid">
-                <!-- Breakfast Items -->
-                <div class="menu-item" data-category="breakfast">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?w=800&h=600&fit=crop" alt="Continental Breakfast">
+    <!-- Dining Areas -->
+    <section class="dining-areas">
+        <div class="container">
+            <h2 class="section-title">Our Dining Areas</h2>
+            <div class="dining-grid">
+                <div class="dining-card">
+                    <div class="dining-image">
+                        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop" alt="Main Restaurant">
                     </div>
-                    <div class="menu-item-content">
-                        <h3>Continental Breakfast</h3>
-                        <p>Fresh pastries, butter, jam, and your choice of coffee or tea</p>
-                        <div class="menu-item-price">KSh 1,200</div>
+                    <div class="dining-content">
+                        <h3>Main Restaurant</h3>
+                        <p>Our elegant main dining area offers a sophisticated atmosphere perfect for any occasion. Enjoy our signature dishes in a comfortable and stylish setting.</p>
+                        <div class="dining-features">
+                            <span><i class="fas fa-users"></i> Up to 80 guests</span>
+                            <span><i class="fas fa-clock"></i> 6:30 AM - 10:30 PM</span>
+                            <span><i class="fas fa-utensils"></i> Full menu available</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="menu-item" data-category="breakfast">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1504674900240-9a9049b7d6ce?w=800&h=600&fit=crop" alt="Full English Breakfast">
+                <div class="dining-card">
+                    <div class="dining-image">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&h=600&fit=crop" alt="Outdoor Terrace">
                     </div>
-                    <div class="menu-item-content">
-                        <h3>Full English Breakfast</h3>
-                        <p>Eggs, bacon, sausages, baked beans, mushrooms, and toast</p>
-                        <div class="menu-item-price">KSh 1,800</div>
-                    </div>
-                </div>
-
-                <!-- Lunch Items -->
-                <div class="menu-item" data-category="lunch">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=600&fit=crop" alt="Grilled Chicken Salad">
-                    </div>
-                    <div class="menu-item-content">
-                        <h3>Grilled Chicken Salad</h3>
-                        <p>Fresh mixed greens with grilled chicken, cherry tomatoes, and balsamic dressing</p>
-                        <div class="menu-item-price">KSh 1,500</div>
+                    <div class="dining-content">
+                        <h3>Outdoor Terrace</h3>
+                        <p>Experience al fresco dining on our beautiful terrace with stunning views of the surrounding landscape. Perfect for romantic dinners and special occasions.</p>
+                        <div class="dining-features">
+                            <span><i class="fas fa-users"></i> Up to 40 guests</span>
+                            <span><i class="fas fa-clock"></i> 7:00 AM - 9:00 PM</span>
+                            <span><i class="fas fa-leaf"></i> Garden views</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="menu-item" data-category="lunch">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=600&fit=crop" alt="Beef Burger">
+                <div class="dining-card">
+                    <div class="dining-image">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop" alt="Bar & Lounge">
                     </div>
-                    <div class="menu-item-content">
-                        <h3>Classic Beef Burger</h3>
-                        <p>Juicy beef patty with lettuce, tomato, cheese, and special sauce</p>
-                        <div class="menu-item-price">KSh 1,300</div>
-                    </div>
-                </div>
-
-                <!-- Dinner Items -->
-                <div class="menu-item" data-category="dinner">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&h=600&fit=crop" alt="Grilled Salmon">
-                    </div>
-                    <div class="menu-item-content">
-                        <h3>Grilled Salmon</h3>
-                        <p>Fresh salmon fillet with seasonal vegetables and lemon butter sauce</p>
-                        <div class="menu-item-price">KSh 2,500</div>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-category="dinner">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&h=600&fit=crop" alt="Beef Tenderloin">
-                    </div>
-                    <div class="menu-item-content">
-                        <h3>Beef Tenderloin</h3>
-                        <p>Premium beef tenderloin with roasted potatoes and red wine reduction</p>
-                        <div class="menu-item-price">KSh 3,200</div>
-                    </div>
-                </div>
-
-                <!-- Local Cuisine -->
-                <div class="menu-item" data-category="dinner">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop" alt="Nyama Choma">
-                    </div>
-                    <div class="menu-item-content">
-                        <h3>Nyama Choma</h3>
-                        <p>Traditional Kenyan grilled meat served with ugali and kachumbari</p>
-                        <div class="menu-item-price">KSh 2,800</div>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-category="lunch">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop" alt="Pilau Rice">
-                    </div>
-                    <div class="menu-item-content">
-                        <h3>Pilau Rice</h3>
-                        <p>Fragrant spiced rice with tender meat and aromatic spices</p>
-                        <div class="menu-item-price">KSh 1,600</div>
-                    </div>
-                </div>
-
-                <!-- Desserts -->
-                <div class="menu-item" data-category="desserts">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&h=600&fit=crop" alt="Chocolate Cake">
-                    </div>
-                    <div class="menu-item-content">
-                        <h3>Chocolate Lava Cake</h3>
-                        <p>Warm chocolate cake with molten center, served with vanilla ice cream</p>
-                        <div class="menu-item-price">KSh 800</div>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-category="desserts">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&h=600&fit=crop" alt="Tiramisu">
-                    </div>
-                    <div class="menu-item-content">
-                        <h3>Tiramisu</h3>
-                        <p>Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cream</p>
-                        <div class="menu-item-price">KSh 900</div>
-                    </div>
-                </div>
-
-                <!-- Beverages -->
-                <div class="menu-item" data-category="beverages">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=800&h=600&fit=crop" alt="Fresh Juice">
-                    </div>
-                    <div class="menu-item-content">
-                        <h3>Fresh Fruit Juice</h3>
-                        <p>Selection of fresh seasonal fruit juices - mango, passion fruit, or orange</p>
-                        <div class="menu-item-price">KSh 400</div>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-category="beverages">
-                    <div class="menu-item-image">
-                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&h=600&fit=crop" alt="Coffee">
-                    </div>
-                    <div class="menu-item-content">
-                        <h3>Premium Coffee</h3>
-                        <p>Freshly brewed coffee from local Kenyan beans</p>
-                        <div class="menu-item-price">KSh 300</div>
+                    <div class="dining-content">
+                        <h3>Bar & Lounge</h3>
+                        <p>Relax and unwind in our stylish bar and lounge area. Enjoy premium cocktails, local beers, and light snacks in a casual and welcoming atmosphere.</p>
+                        <div class="dining-features">
+                            <span><i class="fas fa-users"></i> Up to 50 guests</span>
+                            <span><i class="fas fa-clock"></i> 11:00 AM - 12:00 AM</span>
+                            <span><i class="fas fa-music"></i> Live entertainment</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Special Dietary Options -->
-    <section class="dietary-section">
+    <!-- Bar Services -->
+    <section class="bar-services">
         <div class="container">
-            <h2 class="section-title">Special Dietary Options</h2>
-            <div class="dietary-grid">
-                <div class="dietary-card">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Vegetarian</h3>
-                    <p>Delicious vegetarian options made with fresh, local ingredients</p>
+            <h2 class="section-title">Bar Services</h2>
+            <div class="bar-grid">
+                <div class="bar-item">
+                    <div class="bar-icon">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                    <h3>Craft Cocktails</h3>
+                    <p>Expertly crafted cocktails using premium spirits and fresh local ingredients.</p>
                 </div>
-                <div class="dietary-card">
-                    <i class="fas fa-seedling"></i>
-                    <h3>Vegan</h3>
-                    <p>Plant-based dishes that are both nutritious and flavorful</p>
+                <div class="bar-item">
+                    <div class="bar-icon">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <h3>Wine Selection</h3>
+                    <p>Curated selection of local and international wines to complement your meal.</p>
                 </div>
-                <div class="dietary-card">
-                    <i class="fas fa-wheat-awn"></i>
-                    <h3>Gluten-Free</h3>
-                    <p>Carefully prepared gluten-free alternatives for dietary restrictions</p>
+                <div class="bar-item">
+                    <div class="bar-icon">
+                        <i class="fas fa-beer"></i>
+                    </div>
+                    <h3>Local Beers</h3>
+                    <p>Selection of local Kenyan beers and international favorites on tap and bottled.</p>
                 </div>
-                <div class="dietary-card">
-                    <i class="fas fa-fish"></i>
-                    <h3>Seafood</h3>
-                    <p>Fresh seafood dishes featuring local catch and international favorites</p>
+                <div class="bar-item">
+                    <div class="bar-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Coffee & Tea</h3>
+                    <p>Premium coffee from local Kenyan beans and a variety of specialty teas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Restaurant Hours -->
-    <section class="hours-section">
+    <!-- Special Events -->
+    <section class="restaurant-events">
         <div class="container">
-            <div class="hours-content">
-                <h2>Restaurant Hours</h2>
-                <div class="hours-grid">
-                    <div class="hours-item">
-                        <span class="day">Breakfast</span>
-                        <span class="time">6:30 AM - 10:30 AM</span>
+            <h2 class="section-title">Special Dining Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop" alt="Sunday Brunch">
                     </div>
-                    <div class="hours-item">
-                        <span class="day">Lunch</span>
-                        <span class="time">12:00 PM - 3:00 PM</span>
-                    </div>
-                    <div class="hours-item">
-                        <span class="day">Dinner</span>
-                        <span class="time">6:30 PM - 10:30 PM</span>
-                    </div>
-                    <div class="hours-item">
-                        <span class="day">Bar</span>
-                        <span class="time">11:00 AM - 12:00 AM</span>
+                    <div class="event-content">
+                        <h3>Sunday Brunch</h3>
+                        <p>Join us every Sunday for our famous brunch featuring live cooking stations, fresh pastries, and bottomless mimosas.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-calendar"></i> Every Sunday</span>
+                            <span><i class="fas fa-clock"></i> 11:00 AM - 3:00 PM</span>
+                            <span><i class="fas fa-money-bill"></i> KSh 3,500 per person</span>
+                        </div>
+                        <a href="booking.html" class="btn btn-primary">Reserve Table</a>
                     </div>
                 </div>
-                <p class="reservation-note">For reservations, please call +254 XXX XXX XXX or book online</p>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop" alt="Wine Dinner">
+                    </div>
+                    <div class="event-content">
+                        <h3>Wine & Dine Evenings</h3>
+                        <p>Monthly wine pairing dinners featuring exquisite dishes paired with carefully selected wines.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-calendar"></i> Last Friday of Month</span>
+                            <span><i class="fas fa-clock"></i> 7:00 PM - 10:00 PM</span>
+                            <span><i class="fas fa-money-bill"></i> KSh 5,000 per person</span>
+                        </div>
+                        <a href="booking.html" class="btn btn-primary">Reserve Table</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop" alt="Romantic Dinner">
+                    </div>
+                    <div class="event-content">
+                        <h3>Romantic Dinner Packages</h3>
+                        <p>Special romantic dinner packages for couples with private seating and personalized service.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-calendar"></i> Available Daily</span>
+                            <span><i class="fas fa-clock"></i> 6:30 PM - 9:30 PM</span>
+                            <span><i class="fas fa-money-bill"></i> KSh 8,000 per couple</span>
+                        </div>
+                        <a href="booking.html" class="btn btn-primary">Reserve Table</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation-section">
+        <div class="container">
+            <div class="reservation-content">
+                <h2>Make a Reservation</h2>
+                <p>Book your table for an unforgettable dining experience</p>
+                <form class="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservationName">Full Name *</label>
+                            <input type="text" id="reservationName" name="reservationName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservationEmail">Email *</label>
+                            <input type="email" id="reservationEmail" name="reservationEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservationDate">Date *</label>
+                            <input type="date" id="reservationDate" name="reservationDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservationTime">Time *</label>
+                            <select id="reservationTime" name="reservationTime" required>
+                                <option value="">Select time</option>
+                                <option value="06:30">6:30 AM</option>
+                                <option value="07:00">7:00 AM</option>
+                                <option value="08:00">8:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="18:30">6:30 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservationGuests">Number of Guests *</label>
+                            <select id="reservationGuests" name="reservationGuests" required>
+                                <option value="">Select guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6+ Guests</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservationPhone">Phone Number</label>
+                            <input type="tel" id="reservationPhone" name="reservationPhone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reservationNotes">Special Requests</label>
+                        <textarea id="reservationNotes" name="reservationNotes" rows="3" placeholder="Any special requests or dietary requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Table</button>
+                </form>
             </div>
         </div>
     </section>
@@ -741,27 +816,22 @@
 
     <script src="js/script.js"></script>
     <script>
-        // Menu category filtering
-        const categoryBtns = document.querySelectorAll('.category-btn');
-        const menuItems = document.querySelectorAll('.menu-item');
-
-        categoryBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                categoryBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
-
-                const category = btn.getAttribute('data-category');
-
-                menuItems.forEach(item => {
-                    if (category === 'all' || item.getAttribute('data-category') === category) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
+        // Restaurant reservation form handling
+        document.querySelector('.reservation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.innerHTML = '<span class="loading"></span> Booking...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for your reservation request! We will confirm your booking shortly.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
         });
     </script>
 </body>
