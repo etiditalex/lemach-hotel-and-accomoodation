@@ -421,6 +421,161 @@
         .logo-image:hover {
             transform: scale(1.05);
         }
+        
+        /* Dietary Section Styles */
+        .dietary-section {
+            padding: 80px 0;
+            background: #FFFFFF;
+        }
+        
+        .dietary-section .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .dietary-section .section-title h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .dietary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .dietary-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .dietary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            transition: left 0.3s ease;
+            z-index: 1;
+            opacity: 0.05;
+        }
+        
+        .dietary-card:hover::before {
+            left: 0;
+        }
+        
+        .dietary-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-color: #DAA520;
+        }
+        
+        .dietary-card i {
+            font-size: 3.5rem;
+            color: #8B4513;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+        
+        .dietary-card:hover i {
+            transform: scale(1.1);
+            color: #D2691E;
+        }
+        
+        .dietary-card h3 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        .dietary-card p {
+            color: #7F8C8D;
+            line-height: 1.7;
+            position: relative;
+            z-index: 2;
+            font-size: 1rem;
+            margin: 0;
+        }
+        
+        /* Hours Section Styles */
+        .hours-section {
+            padding: 80px 0;
+            background: #F8F9FA;
+        }
+        
+        .hours-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .hours-content h2 {
+            color: #8B4513;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hours-grid {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hours-item .day {
+            font-weight: 600;
+            color: #8B4513;
+        }
+        
+        .hours-item .time {
+            color: #7F8C8D;
+        }
+        
+        .reservation-note {
+            color: #7F8C8D;
+            font-style: italic;
+        }
+        
+        /* Additional Responsive Styles for Dietary and Hours */
+        @media (max-width: 768px) {
+            .dietary-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hours-item {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
