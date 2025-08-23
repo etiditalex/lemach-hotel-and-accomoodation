@@ -7,6 +7,421 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Inline Fallback Styles for GitHub Pages -->
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            background: #FFFFFF;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header and Navigation */
+        .header {
+            background: #FFFFFF;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            padding: 15px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav-logo img {
+            height: 60px;
+            width: auto;
+            max-width: 220px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #2C3E50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #8B4513;
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #8B4513;
+        }
+        
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #FFFFFF;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 10px 0;
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            list-style: none;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: #2C3E50;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-menu li a:hover {
+            background: #F8F9FA;
+            color: #8B4513;
+        }
+        
+        /* Navigation Buttons */
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: #8B4513;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Menu Section */
+        .menu-section {
+            padding: 80px 0;
+            background: #F8F9FA;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #8B4513;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+        
+        .menu-categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #8B4513;
+            background: transparent;
+            color: #8B4513;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: #8B4513;
+            color: #FFFFFF;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .menu-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        
+        .menu-item-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .menu-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .menu-item:hover .menu-item-image img {
+            transform: scale(1.05);
+        }
+        
+        .menu-item-content {
+            padding: 20px;
+        }
+        
+        .menu-item-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .menu-item-content p {
+            color: #7F8C8D;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .menu-item-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #D2691E;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2C3E50;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3, .footer-section h4 {
+            color: #DAA520;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #BDC3C7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #DAA520;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: #DAA520;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #F39C12;
+        }
+        
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #BDC3C7;
+        }
+        
+        .contact-info i {
+            color: #DAA520;
+            width: 20px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495E;
+            color: #BDC3C7;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container {
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .menu-item-content {
+                padding: 15px;
+            }
+        }
+        
+        /* Logo Image Specific Styles */
+        .logo-image {
+            height: 60px;
+            width: auto;
+            max-width: 220px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -14,7 +429,11 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="images/lemach-logo.svg" alt="Lemach Hotel Logo" class="logo-image">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200&h=60&fit=crop" alt="Lemach Hotel Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display: none;">
+                        <h2 style="color: #8B4513; margin: 0; font-family: 'Playfair Display', serif;">LEMACH HOTEL</h2>
+                        <span style="color: #D2691E; font-size: 0.9rem;">& ACCOMMODATIONS</span>
+                    </div>
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
@@ -79,7 +498,7 @@
                 <!-- Breakfast Items -->
                 <div class="menu-item" data-category="breakfast">
                     <div class="menu-item-image">
-                        <img src="images/breakfast-1.jpg" alt="Continental Breakfast">
+                        <img src="https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?w=800&h=600&fit=crop" alt="Continental Breakfast">
                     </div>
                     <div class="menu-item-content">
                         <h3>Continental Breakfast</h3>
@@ -90,7 +509,7 @@
 
                 <div class="menu-item" data-category="breakfast">
                     <div class="menu-item-image">
-                        <img src="images/breakfast-2.jpg" alt="Full English Breakfast">
+                        <img src="https://images.unsplash.com/photo-1504674900240-9a9049b7d6ce?w=800&h=600&fit=crop" alt="Full English Breakfast">
                     </div>
                     <div class="menu-item-content">
                         <h3>Full English Breakfast</h3>
@@ -102,7 +521,7 @@
                 <!-- Lunch Items -->
                 <div class="menu-item" data-category="lunch">
                     <div class="menu-item-image">
-                        <img src="images/lunch-1.jpg" alt="Grilled Chicken Salad">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=600&fit=crop" alt="Grilled Chicken Salad">
                     </div>
                     <div class="menu-item-content">
                         <h3>Grilled Chicken Salad</h3>
@@ -113,7 +532,7 @@
 
                 <div class="menu-item" data-category="lunch">
                     <div class="menu-item-image">
-                        <img src="images/lunch-2.jpg" alt="Beef Burger">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=600&fit=crop" alt="Beef Burger">
                     </div>
                     <div class="menu-item-content">
                         <h3>Classic Beef Burger</h3>
@@ -125,7 +544,7 @@
                 <!-- Dinner Items -->
                 <div class="menu-item" data-category="dinner">
                     <div class="menu-item-image">
-                        <img src="images/dinner-1.jpg" alt="Grilled Salmon">
+                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&h=600&fit=crop" alt="Grilled Salmon">
                     </div>
                     <div class="menu-item-content">
                         <h3>Grilled Salmon</h3>
@@ -136,7 +555,7 @@
 
                 <div class="menu-item" data-category="dinner">
                     <div class="menu-item-image">
-                        <img src="images/dinner-2.jpg" alt="Beef Tenderloin">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&h=600&fit=crop" alt="Beef Tenderloin">
                     </div>
                     <div class="menu-item-content">
                         <h3>Beef Tenderloin</h3>
@@ -148,7 +567,7 @@
                 <!-- Local Cuisine -->
                 <div class="menu-item" data-category="dinner">
                     <div class="menu-item-image">
-                        <img src="images/local-1.jpg" alt="Nyama Choma">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop" alt="Nyama Choma">
                     </div>
                     <div class="menu-item-content">
                         <h3>Nyama Choma</h3>
@@ -159,7 +578,7 @@
 
                 <div class="menu-item" data-category="lunch">
                     <div class="menu-item-image">
-                        <img src="images/local-2.jpg" alt="Pilau Rice">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&h=600&fit=crop" alt="Pilau Rice">
                     </div>
                     <div class="menu-item-content">
                         <h3>Pilau Rice</h3>
@@ -171,7 +590,7 @@
                 <!-- Desserts -->
                 <div class="menu-item" data-category="desserts">
                     <div class="menu-item-image">
-                        <img src="images/dessert-1.jpg" alt="Chocolate Cake">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&h=600&fit=crop" alt="Chocolate Cake">
                     </div>
                     <div class="menu-item-content">
                         <h3>Chocolate Lava Cake</h3>
@@ -182,7 +601,7 @@
 
                 <div class="menu-item" data-category="desserts">
                     <div class="menu-item-image">
-                        <img src="images/dessert-2.jpg" alt="Tiramisu">
+                        <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&h=600&fit=crop" alt="Tiramisu">
                     </div>
                     <div class="menu-item-content">
                         <h3>Tiramisu</h3>
@@ -194,7 +613,7 @@
                 <!-- Beverages -->
                 <div class="menu-item" data-category="beverages">
                     <div class="menu-item-image">
-                        <img src="images/beverage-1.jpg" alt="Fresh Juice">
+                        <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=800&h=600&fit=crop" alt="Fresh Juice">
                     </div>
                     <div class="menu-item-content">
                         <h3>Fresh Fruit Juice</h3>
@@ -205,7 +624,7 @@
 
                 <div class="menu-item" data-category="beverages">
                     <div class="menu-item-image">
-                        <img src="images/beverage-2.jpg" alt="Coffee">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&h=600&fit=crop" alt="Coffee">
                     </div>
                     <div class="menu-item-content">
                         <h3>Premium Coffee</h3>
