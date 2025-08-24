@@ -59,6 +59,11 @@
             margin-left: 1rem;
         }
         
+        /* Hide book button on mobile */
+        .btn-primary {
+            display: inline-block;
+        }
+        
         .bar {
             width: 25px;
             height: 3px;
@@ -961,8 +966,8 @@
             left: -100%;
             width: 100%;
             height: 100vh;
-            background: rgba(44, 62, 80, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(44, 62, 80, 0.98);
+            backdrop-filter: blur(15px);
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
@@ -980,7 +985,7 @@
         .mobile-menu-header {
             width: 100%;
             background: rgba(44, 62, 80, 1);
-            padding: 1.5rem 2rem 1rem;
+            padding: 1.2rem 1.5rem 0.8rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: space-between;
@@ -991,9 +996,9 @@
             background: none;
             border: none;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             cursor: pointer;
-            padding: 0.5rem;
+            padding: 0.4rem;
             border-radius: 50%;
             transition: background 0.3s ease;
         }
@@ -1005,24 +1010,24 @@
         .mobile-logo {
             color: white;
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
         }
         
         .nav-item {
             width: 100%;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             margin: 0;
         }
         
         .nav-link {
-            font-size: 1.1rem;
-            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            padding: 0.7rem 1.5rem;
             display: block;
             width: 100%;
             color: white;
             text-decoration: none;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
             border: none;
             background: none;
             text-align: left;
@@ -1031,8 +1036,9 @@
         }
         
         .nav-link:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             color: #FFD700;
+            padding-left: 1.8rem;
         }
         
         .dropdown-menu {
@@ -1040,7 +1046,7 @@
             opacity: 1;
             visibility: visible;
             transform: none;
-            background: rgba(52, 73, 94, 0.8);
+            background: rgba(52, 73, 94, 0.9);
             margin: 0;
             border-radius: 0;
             box-shadow: none;
@@ -1048,34 +1054,36 @@
         }
         
         .dropdown-menu li a {
-            padding: 0.6rem 3rem;
-            font-size: 1rem;
+            padding: 0.5rem 2.5rem;
+            font-size: 0.95rem;
             color: rgba(255, 255, 255, 0.9);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
             margin: 0;
+            transition: all 0.3s ease;
         }
         
         .dropdown-menu li a:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             color: #FFD700;
+            padding-left: 2.8rem;
         }
         
         .hamburger {
             display: flex;
             z-index: 1001;
-            padding: 8px;
-            margin-left: 1rem;
-            background: rgba(139, 69, 19, 0.1);
-            border-radius: 8px;
+            padding: 6px;
+            margin-left: 0.5rem;
+            background: rgba(139, 69, 19, 0.15);
+            border-radius: 6px;
             transition: all 0.3s ease;
         }
         
         .hamburger:hover {
-            background: rgba(139, 69, 19, 0.2);
+            background: rgba(139, 69, 19, 0.25);
         }
         
         .hamburger.active .bar:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
+            transform: rotate(-45deg) translate(-4px, 5px);
         }
         
         .hamburger.active .bar:nth-child(2) {
@@ -1083,7 +1091,40 @@
         }
         
         .hamburger.active .bar:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-4px, -5px);
+        }
+        
+        /* Hide book button on mobile */
+        .btn-primary {
+            display: none;
+        }
+        
+        /* Improve mobile navigation spacing */
+        .nav-container {
+            padding: 0 1rem;
+        }
+        
+        .nav-logo img {
+            height: 50px;
+        }
+        
+        /* Mobile menu improvements */
+        .mobile-menu-header {
+            padding: 1rem 1.5rem 0.8rem;
+        }
+        
+        .mobile-logo img {
+            height: 35px;
+        }
+        
+        .nav-link {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .dropdown-menu li a {
+            padding: 0.4rem 2.2rem;
+            font-size: 0.9rem;
         }
         }
         
@@ -1092,9 +1133,8 @@
                 padding: 0 15px;
             }
             
-            .nav-logo h2,
-            .logo-text {
-                font-size: 1.5rem;
+            .nav-logo img {
+                height: 45px;
             }
             
             .hero {
@@ -1128,20 +1168,21 @@
             }
             
             .mobile-menu-header {
-                padding: 1.5rem 1.5rem 1rem;
+                padding: 1.2rem 1.5rem 0.8rem;
             }
             
-            .mobile-logo {
-                font-size: 1.3rem;
+            .mobile-logo img {
+                height: 30px;
             }
             
             .nav-link {
-                font-size: 1rem;
-                padding: 0.7rem 1.5rem;
+                font-size: 0.95rem;
+                padding: 0.6rem 1.5rem;
             }
             
             .dropdown-menu li a {
-                padding: 0.5rem 2.5rem;
+                padding: 0.4rem 2.2rem;
+                font-size: 0.9rem;
             }
             
             .hamburger {
@@ -1227,13 +1268,14 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="https://res-console.cloudinary.com/dyfnobo9r/thumbnails/v1/image/upload/v1756012070/ZG93bmxvYWRfdzRvZ2Rt/preview" alt="Lemach Hotel Logo" class="logo-image" style="height: 60px; width: auto;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <h2 class="logo-text" style="display: none; margin: 0; color: #8B4513; font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 600;">Lemach Hotel</h2>
+                    <img src="https://res-console.cloudinary.com/dyfnobo9r/thumbnails/v1/image/upload/v1756012070/ZG93bmxvYWRfdzRvZ2Rt/preview" alt="Lemach Hotel Logo" class="logo-image" style="height: 60px; width: auto;">
                 </div>
                 <ul class="nav-menu">
                     <!-- Mobile Menu Header -->
                     <div class="mobile-menu-header">
-                        <div class="mobile-logo">Lemach Hotel</div>
+                        <div class="mobile-logo">
+                            <img src="https://res-console.cloudinary.com/dyfnobo9r/thumbnails/v1/image/upload/v1756012070/ZG93bmxvYWRfdzRvZ2Rt/preview" alt="Lemach Hotel Logo" style="height: 40px; width: auto; filter: brightness(0) invert(1);">
+                        </div>
                         <button class="mobile-menu-close" id="mobileMenuClose">
                             <i class="fas fa-times"></i>
                         </button>
@@ -1930,3 +1972,4 @@
     </script>
 </body>
 </html>
+
