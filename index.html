@@ -93,13 +93,23 @@
                 object-fit: contain;
             }
             
-            .nav-logo img {
-                height: 60px;
-                width: auto;
-                max-width: 220px;
-                object-fit: contain;
-                filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-            }
+                    .nav-logo img {
+            height: 60px;
+            width: auto;
+            max-width: 220px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .logo-text {
+            display: none;
+            margin: 0;
+            color: #8B4513;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1;
+        }
         
         .nav-menu {
             display: flex;
@@ -1079,7 +1089,8 @@
                 padding: 0 15px;
             }
             
-            .nav-logo h2 {
+            .nav-logo h2,
+            .logo-text {
                 font-size: 1.5rem;
             }
             
@@ -1213,7 +1224,8 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="https://res-console.cloudinary.com/dyfnobo9r/thumbnails/v1/image/upload/v1756012070/ZG93bmxvYWRfdzRvZ2Rt/preview" alt="Lemach Hotel Logo" class="logo-image" style="height: 60px; width: auto;">
+                    <img src="https://res-console.cloudinary.com/dyfnobo9r/thumbnails/v1/image/upload/v1756012070/ZG93bmxvYWRfdzRvZ2Rt/preview" alt="Lemach Hotel Logo" class="logo-image" style="height: 60px; width: auto;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <h2 class="logo-text" style="display: none; margin: 0; color: #8B4513; font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 600;">Lemach Hotel</h2>
                 </div>
                 <ul class="nav-menu">
                     <!-- Mobile Menu Header -->
