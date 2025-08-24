@@ -1115,6 +1115,8 @@
         
         .mobile-logo img {
             height: 35px;
+            filter: brightness(0) invert(1);
+            object-fit: contain;
         }
         
         .nav-link {
@@ -1126,6 +1128,24 @@
             padding: 0.4rem 2.2rem;
             font-size: 0.9rem;
         }
+        
+        /* Ensure logo and hamburger are properly aligned */
+        .nav-container {
+            position: relative;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-logo img {
+            height: 60px;
+            width: auto;
+            max-width: 220px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
         }
         
         @media (max-width: 480px) {
@@ -1135,6 +1155,19 @@
             
             .nav-logo img {
                 height: 45px;
+            }
+            
+            /* Ensure proper alignment on small screens */
+            .nav-buttons {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .hamburger {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             
             .hero {
@@ -1268,13 +1301,13 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="https://res-console.cloudinary.com/dyfnobo9r/thumbnails/v1/image/upload/v1756012070/ZG93bmxvYWRfdzRvZ2Rt/preview" alt="Lemach Hotel Logo" class="logo-image" style="height: 60px; width: auto;">
+                    <img src="https://res.cloudinary.com/dyfnobo9r/image/upload/v1756012070/download_w4ogdm.png" alt="Lemach Hotel Logo" class="logo-image" style="height: 60px; width: auto;">
                 </div>
                 <ul class="nav-menu">
                     <!-- Mobile Menu Header -->
                     <div class="mobile-menu-header">
                         <div class="mobile-logo">
-                            <img src="https://res-console.cloudinary.com/dyfnobo9r/thumbnails/v1/image/upload/v1756012070/ZG93bmxvYWRfdzRvZ2Rt/preview" alt="Lemach Hotel Logo" style="height: 40px; width: auto; filter: brightness(0) invert(1);">
+                            <img src="https://res.cloudinary.com/dyfnobo9r/image/upload/v1756012070/download_w4ogdm.png" alt="Lemach Hotel Logo" style="height: 40px; width: auto; filter: brightness(0) invert(1);">
                         </div>
                         <button class="mobile-menu-close" id="mobileMenuClose">
                             <i class="fas fa-times"></i>
@@ -1417,9 +1450,9 @@
             </button>
             
             <div class="modal-header">
-                <div class="modal-logo">
-                    <img src="https://res-console.cloudinary.com/dyfnobo9r/thumbnails/v1/image/upload/v1756012070/ZG93bmxvYWRfdzRvZ2Rt/preview" alt="Lemach Hotel Logo" class="logo-image" style="height: 60px; width: auto;">
-                </div>
+                                 <div class="modal-logo">
+                     <img src="https://res.cloudinary.com/dyfnobo9r/image/upload/v1756012070/download_w4ogdm.png" alt="Lemach Hotel Logo" class="logo-image" style="height: 60px; width: auto;">
+                 </div>
                 <h2>Welcome to Lemach Hotel</h2>
                 <p>Experience luxury and comfort in the heart of Kilifi County</p>
             </div>
